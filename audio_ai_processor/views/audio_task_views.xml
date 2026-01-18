@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record id="audio_task_view_form" model="ir.ui.view">
+        <field name="name">audio.task.form</field>
+        <field name="model">audio.task</field>
+        <field name="arch" type="xml">
+            <form string="Audio Task">
+                <header>
+                    <button name="action_add_to_queue"
+                            string="Add to Queue"
+                            type="object"
+                            class="btn-primary"
+                            invisible="state != 'draft' or not audio_file"/>
+                    <button name="action_cancel_queue"
+                            string="Cancel"
+                            type="object"
+                            invisible="state != 'pending'"/>
+                    <button name="action_reset"
+                            string="Reset"
+                            type="object"
+                            invisible="state in ('draft', 'pending', 'transcribing')"/>
+                    <field name="state" widget="statusbar" statusbar_visible="draft,pending,transcribing,done"/>
+                </header>
+                <sheet>
+                    <div class="oe_title">
+                        <h1>
+                            <field name="name" placeholder="Task Name"/>
+                        </h1>
+                    </div>
+
+                    <div class="alert alert-info" role="alert" invisible="state != 'pending'">
+                        <strong>Queue Position:</strong> <field name="queue_position" readonly="1"/>
+                    </div>
+
+                    <group invisible="state != 'draft'">
+                        <group>
+                            <field name="audio_file" filename="audio_filename"/>
+                            <field name="audio_filename" invisible="1"/>
+                        </group>
+                    </group>
+
+                    <group invisible="state == 'draft'">
+                        <group string="Audio File">
+                            <field name="audio_file" filename="audio_filename" readonly="1"/>
+                            <field name="audio_filename" invisible="1"/>
+                        </group>
+                        <group string="Info" invisible="state not in ('done', 'error')">
+                            <field name="user_id" readonly="1"/>
+                            <field name="create_date" readonly="1"/>
+                            <field name="transcription_time" invisible="not transcription_time"/>
+                        </group>
+                    </group>
+
+                    <notebook invisible="state == 'draft'">
+                        <page string="Transcription" name="transcription" invisible="state not in ('done', 'error')">
+                            <field name="transcription" readonly="1"/>
+                            <group string="Download" invisible="not result_file">
+                                <field name="result_file" filename="result_filename"/>
+                                <field name="result_filename" invisible="1"/>
+                            </group>
+                        </page>
+
+                        <page string="Error" name="error" invisible="not error_message">
+                            <field name="error_message" readonly="1"/>
+                        </page>
+                    </notebook>
+                </sheet>
+                <chatter/>
+            </form>
+        </field>
+    </record>
+
+    <record id="audio_task_view_tree" model="ir.ui.view">
+        <field name="name">audio.task.tree</field>
+        <field name="model">audio.task</field>
+        <field name="arch" type="xml">
+            <tree string="Audio Tasks">
+                <field name="name"/>
+                <field name="audio_filename"/>
+                <field name="state" widget="badge"
+                       decoration-info="state == 'draft'"
+                       decoration-warning="state in ('pending', 'transcribing')"
+                       decoration-success="state == 'done'"
+                       decoration-danger="state == 'error'"/>
+                <field name="queue_position" optional="show"/>
+                <field name="user_id" optional="hide"/>
+                <field name="create_date" optional="hide"/>
+            </tree>
+        </field>
+    </record>
+
+    <record id="audio_task_view_search" model="ir.ui.view">
+        <field name="name">audio.task.search</field>
+        <field name="model">audio.task</field>
+        <field name="arch" type="xml">
+            <search string="Search Audio Tasks">
+                <field name="name"/>
+                <field name="audio_filename"/>
+                <separator/>
+                <filter name="filter_draft" string="Draft" domain="[('state', '=', 'draft')]"/>
+                <filter name="filter_pending" string="In Queue" domain="[('state', '=', 'pending')]"/>
+                <filter name="filter_done" string="Done" domain="[('state', '=', 'done')]"/>
+                <filter name="filter_error" string="Error" domain="[('state', '=', 'error')]"/>
+                <separator/>
+                <filter name="filter_my" string="My Tasks" domain="[('user_id', '=', uid)]"/>
+                <group expand="0" string="Group By">
+                    <filter name="groupby_state" string="Status" context="{'group_by': 'state'}"/>
+                    <filter name="groupby_user" string="User" context="{'group_by': 'user_id'}"/>
+                </group>
+            </search>
+        </field>
+    </record>
+
+    <record id="audio_task_action" model="ir.actions.act_window">
+        <field name="name">Audio Tasks</field>
+        <field name="res_model">audio.task</field>
+        <field name="view_mode">tree,form</field>
+        <field name="search_view_id" ref="audio_task_view_search"/>
+        <field name="context">{'search_default_filter_my': 1}</field>
+        <field name="help" type="html">
+            <p class="o_view_nocontent_smiling_face">
+                Create your first audio task
+            </p>
+            <p>
+                Upload audio files to transcribe them with AI.
+            </p>
+        </field>
+    </record>
+
+</odoo>

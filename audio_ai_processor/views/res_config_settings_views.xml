@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record id="res_config_settings_view_form" model="ir.ui.view">
+        <field name="name">res.config.settings.view.form.inherit.audio.ai</field>
+        <field name="model">res.config.settings</field>
+        <field name="inherit_id" ref="base.res_config_settings_view_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//form" position="inside">
+                <app data-string="Audio AI Processor" string="Audio AI Processor" name="audio_ai_processor">
+                    <block title="OpenAI Whisper">
+                        <setting string="OpenAI API Key" help="Required for audio transcription">
+                            <field name="openai_api_key" password="True"/>
+                        </setting>
+                        <setting string="Language" help="Language hint for transcription">
+                            <field name="whisper_language"/>
+                        </setting>
+                    </block>
+                    <block title="Queue Processing">
+                        <setting string="Processing Mode" help="How to process the queue">
+                            <field name="processing_mode" widget="radio"/>
+                        </setting>
+                        <setting string="Scheduled Hours" help="Process only during these hours (for Scheduled mode)"
+                                 invisible="processing_mode != 'scheduled'">
+                            <div class="row">
+                                <div class="col-4">
+                                    <label for="scheduled_hour_from" string="From"/>
+                                    <field name="scheduled_hour_from" widget="integer"/>
+                                </div>
+                                <div class="col-4">
+                                    <label for="scheduled_hour_to" string="To"/>
+                                    <field name="scheduled_hour_to" widget="integer"/>
+                                </div>
+                            </div>
+                        </setting>
+                    </block>
+                </app>
+            </xpath>
+        </field>
+    </record>
+
+</odoo>

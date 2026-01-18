@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record id="audio_upload_wizard_view_form" model="ir.ui.view">
+        <field name="name">audio.upload.wizard.form</field>
+        <field name="model">audio.upload.wizard</field>
+        <field name="arch" type="xml">
+            <form string="Upload Audio Files">
+                <field name="file_ids" nolabel="1">
+                    <tree editable="bottom">
+                        <field name="audio_file" filename="filename"/>
+                        <field name="filename" invisible="1"/>
+                    </tree>
+                </field>
+                <footer>
+                    <button name="action_upload"
+                            string="Upload and Add to Queue"
+                            type="object"
+                            class="btn-primary"/>
+                    <button string="Cancel"
+                            class="btn-secondary"
+                            special="cancel"/>
+                </footer>
+            </form>
+        </field>
+    </record>
+
+    <record id="audio_upload_wizard_action" model="ir.actions.act_window">
+        <field name="name">Upload Audio Files</field>
+        <field name="res_model">audio.upload.wizard</field>
+        <field name="view_mode">form</field>
+        <field name="target">new</field>
+    </record>
+
+</odoo>

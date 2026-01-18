@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <menuitem id="audio_ai_processor_menu_root"
+              name="Audio AI"
+              web_icon="audio_ai_processor,static/description/icon.png"
+              sequence="100"/>
+
+    <menuitem id="audio_task_menu"
+              name="Audio Tasks"
+              parent="audio_ai_processor_menu_root"
+              action="audio_task_action"
+              sequence="10"/>
+
+    <menuitem id="audio_upload_menu"
+              name="Upload Multiple Files"
+              parent="audio_ai_processor_menu_root"
+              action="audio_upload_wizard_action"
+              sequence="20"/>
+
+</odoo>
