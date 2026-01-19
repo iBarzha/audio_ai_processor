@@ -1,3 +1,5 @@
+"""Utilities for environment management in background threads."""
+
 import contextlib
 
 from odoo import SUPERUSER_ID, api, registry
@@ -5,6 +7,16 @@ from odoo import SUPERUSER_ID, api, registry
 
 @contextlib.contextmanager
 def new_environment(dbname, uid=None, context=None):
+    """Create new Odoo environment for use in background threads.
+
+    Args:
+        dbname: Database name
+        uid: User ID (defaults to SUPERUSER_ID)
+        context: Odoo context dict
+
+    Yields:
+        api.Environment: New Odoo environment
+    """
     if context is None:
         context = {}
 

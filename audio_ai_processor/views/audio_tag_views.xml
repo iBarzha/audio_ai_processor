@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record id="audio_tag_view_form" model="ir.ui.view">
+        <field name="name">audio.tag.form</field>
+        <field name="model">audio.tag</field>
+        <field name="arch" type="xml">
+            <form string="Audio Tag">
+                <sheet>
+                    <group>
+                        <field name="name"/>
+                        <field name="color" widget="color_picker"/>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id="audio_tag_view_tree" model="ir.ui.view">
+        <field name="name">audio.tag.tree</field>
+        <field name="model">audio.tag</field>
+        <field name="arch" type="xml">
+            <tree editable="bottom">
+                <field name="name"/>
+                <field name="color" widget="color_picker"/>
+            </tree>
+        </field>
+    </record>
+
+    <record id="audio_tag_action" model="ir.actions.act_window">
+        <field name="name">Tags</field>
+        <field name="res_model">audio.tag</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+</odoo>

@@ -18,4 +18,22 @@
               action="audio_upload_wizard_action"
               sequence="20"/>
 
+    <menuitem id="audio_ai_processor_menu_config"
+              name="Configuration"
+              parent="audio_ai_processor_menu_root"
+              sequence="100"
+              groups="audio_ai_processor.audio_ai_group_admin"/>
+
+    <menuitem id="audio_category_menu"
+              name="Categories"
+              parent="audio_ai_processor_menu_config"
+              action="audio_category_action"
+              sequence="10"/>
+
+    <menuitem id="audio_tag_menu"
+              name="Tags"
+              parent="audio_ai_processor_menu_config"
+              action="audio_tag_action"
+              sequence="20"/>
+
 </odoo>

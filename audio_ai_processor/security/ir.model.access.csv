@@ -1,4 +1,9 @@
 id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
-access_audio_task_user,audio.task.user,model_audio_task,base.group_user,1,1,1,1
-access_audio_upload_wizard_user,audio.upload.wizard.user,model_audio_upload_wizard,base.group_user,1,1,1,1
-access_audio_upload_wizard_line_user,audio.upload.wizard.line.user,model_audio_upload_wizard_line,base.group_user,1,1,1,1
+access_audio_task_user,audio.task.user,model_audio_task,audio_ai_group_user,1,1,1,0
+access_audio_task_admin,audio.task.admin,model_audio_task,audio_ai_group_admin,1,1,1,1
+access_audio_category_user,audio.category.user,model_audio_category,audio_ai_group_user,1,0,0,0
+access_audio_category_admin,audio.category.admin,model_audio_category,audio_ai_group_admin,1,1,1,1
+access_audio_tag_user,audio.tag.user,model_audio_tag,audio_ai_group_user,1,0,0,0
+access_audio_tag_admin,audio.tag.admin,model_audio_tag,audio_ai_group_admin,1,1,1,1
+access_audio_upload_wizard_user,audio.upload.wizard.user,model_audio_upload_wizard,audio_ai_group_user,1,1,1,1
+access_audio_upload_wizard_line_user,audio.upload.wizard.line.user,model_audio_upload_wizard_line,audio_ai_group_user,1,1,1,1

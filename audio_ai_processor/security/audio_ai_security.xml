@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record id="audio_ai_module_category" model="ir.module.category">
+        <field name="name">Audio AI</field>
+        <field name="description">Audio transcription and processing</field>
+        <field name="sequence">50</field>
+    </record>
+
+    <record id="audio_ai_group_user" model="res.groups">
+        <field name="name">User</field>
+        <field name="category_id" ref="audio_ai_module_category"/>
+        <field name="implied_ids" eval="[(4, ref('base.group_user'))]"/>
+    </record>
+
+    <record id="audio_ai_group_admin" model="res.groups">
+        <field name="name">Administrator</field>
+        <field name="category_id" ref="audio_ai_module_category"/>
+        <field name="implied_ids" eval="[(4, ref('audio_ai_group_user'))]"/>
+        <field name="users" eval="[(4, ref('base.user_root')), (4, ref('base.user_admin'))]"/>
+    </record>
+
+    <record id="audio_task_rule_user" model="ir.rule">
+        <field name="name">Audio Task: User sees own tasks</field>
+        <field name="model_id" ref="model_audio_task"/>
+        <field name="domain_force">[('user_id', '=', user.id)]</field>
+        <field name="groups" eval="[(4, ref('audio_ai_group_user'))]"/>
+        <field name="perm_read" eval="True"/>
+        <field name="perm_write" eval="True"/>
+        <field name="perm_create" eval="True"/>
+        <field name="perm_unlink" eval="True"/>
+    </record>
+
+    <record id="audio_task_rule_admin" model="ir.rule">
+        <field name="name">Audio Task: Admin sees all tasks</field>
+        <field name="model_id" ref="model_audio_task"/>
+        <field name="domain_force">[(1, '=', 1)]</field>
+        <field name="groups" eval="[(4, ref('audio_ai_group_admin'))]"/>
+        <field name="perm_read" eval="True"/>
+        <field name="perm_write" eval="True"/>
+        <field name="perm_create" eval="True"/>
+        <field name="perm_unlink" eval="True"/>
+    </record>
+
+</odoo>

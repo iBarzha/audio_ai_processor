@@ -1,0 +1,878 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* audio_ai_processor
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 17.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-01-19 09:30+0000\n"
+"PO-Revision-Date: 2026-01-19 09:30+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: audio_ai_processor
+#: model:ir.actions.report,print_report_name:audio_ai_processor.action_report_audio_task
+msgid "'Audio Task - %s' % (object.name)"
+msgstr "'Аудіо завдання - %s' % (object.name)"
+
+#. module: audio_ai_processor
+#: model_terms:ir.ui.view,arch_db:audio_ai_processor.report_audio_task
+msgid "<strong>Audio File:</strong>"
+msgstr "<strong>Аудіофайл:</strong>"
+
+#. module: audio_ai_processor
+#: model_terms:ir.ui.view,arch_db:audio_ai_processor.report_audio_task
+msgid "<strong>Category:</strong>"
+msgstr "<strong>Категорія:</strong>"
+
+#. module: audio_ai_processor
+#: model_terms:ir.ui.view,arch_db:audio_ai_processor.report_audio_task
+msgid "<strong>Created:</strong>"
+msgstr "<strong>Створено:</strong>"
+
+#. module: audio_ai_processor
+#: model_terms:ir.ui.view,arch_db:audio_ai_processor.report_audio_task
+msgid "<strong>Processing Time:</strong>"
+msgstr "<strong>Час обробки:</strong>"
+
+#. module: audio_ai_processor
+#: model_terms:ir.ui.view,arch_db:audio_ai_processor.audio_task_view_form
+msgid "<strong>Queue Position:</strong>"
+msgstr "<strong>Позиція у черзі:</strong>"
+
+#. module: audio_ai_processor
+#: model_terms:ir.ui.view,arch_db:audio_ai_processor.report_audio_task
+msgid "<strong>Status:</strong>"
+msgstr "<strong>Статус:</strong>"
+
+#. module: audio_ai_processor
+#: model_terms:ir.ui.view,arch_db:audio_ai_processor.report_audio_task
+msgid "<strong>User:</strong>"
+msgstr "<strong>Користувач:</strong>"
+
+#. module: audio_ai_processor
+#: model:ir.model.fields,help:audio_ai_processor.field_res_config_settings__openai_api_key
+msgid "API key for Whisper transcription"
+msgstr "API ключ для транскрипції Whisper"
+
+#. module: audio_ai_processor
+#: model:ir.model.fields,field_description:audio_ai_processor.field_audio_task__message_needaction
+msgid "Action Needed"
+msgstr "Потрібна дія"
+
+#. module: audio_ai_processor
+#: model:ir.model.fields,field_description:audio_ai_processor.field_audio_category__active
+msgid "Active"
+msgstr "Активний"
+
+#. module: audio_ai_processor
+#: model:ir.model.fields,field_description:audio_ai_processor.field_audio_task__activity_ids
+msgid "Activities"
+msgstr "Активності"
+
+#. module: audio_ai_processor
+#: model:ir.model.fields,field_description:audio_ai_processor.field_audio_task__activity_exception_decoration
+msgid "Activity Exception Decoration"
+msgstr ""
+
+#. module: audio_ai_processor
+#: model:ir.model.fields,field_description:audio_ai_processor.field_audio_task__activity_state
+msgid "Activity State"
+msgstr ""
+
+#. module: audio_ai_processor
+#: model:ir.model.fields,field_description:audio_ai_processor.field_audio_task__activity_type_icon
+msgid "Activity Type Icon"
+msgstr ""
+
+#. module: audio_ai_processor
+#: model_terms:ir.ui.view,arch_db:audio_ai_processor.audio_task_view_form
+msgid "Add to Queue"
+msgstr "Додати до черги"
+
+#. module: audio_ai_processor
+#. odoo-python
+#: code:addons/audio_ai_processor/models/audio_task.py:0
+#, python-format
+msgid "Added to processing queue."
+msgstr "Додано до черги обробки."
+
+#. module: audio_ai_processor
+#: model:res.groups,name:audio_ai_processor.audio_ai_group_admin
+msgid "Administrator"
+msgstr "Адміністратор"
+
+#. module: audio_ai_processor
+#: model:audio.tag,name:audio_ai_processor.audio_tag_archive
+msgid "Archive"
+msgstr "Архів"
+
+#. module: audio_ai_processor
+#: model:ir.model.fields,field_description:audio_ai_processor.field_audio_task__message_attachment_count
+msgid "Attachment Count"
+msgstr "Кількість вкладень"
+
+#. module: audio_ai_processor
+#: model:ir.module.category,name:audio_ai_processor.audio_ai_module_category
+#: model:ir.ui.menu,name:audio_ai_processor.audio_ai_processor_menu_root
+msgid "Audio AI"
+msgstr "ШІ Транскрибатор"
+
+#. module: audio_ai_processor
+#: model_terms:ir.ui.view,arch_db:audio_ai_processor.res_config_settings_view_form
+msgid "Audio AI Processor"
+msgstr "Обробник Audio AI"
+
+#. module: audio_ai_processor
+#: model:ir.actions.server,name:audio_ai_processor.ir_cron_process_audio_queue_ir_actions_server
+msgid "Audio AI: Process Queue"
+msgstr "Audio AI: Обробка черги"
+
+#. module: audio_ai_processor
+#: model_terms:ir.ui.view,arch_db:audio_ai_processor.audio_category_view_tree
+msgid "Audio Categories"
+msgstr "Категорії аудіо"
+
+#. module: audio_ai_processor
+#: model:ir.model,name:audio_ai_processor.model_audio_category
+#: model_terms:ir.ui.view,arch_db:audio_ai_processor.audio_category_view_form
+msgid "Audio Category"
+msgstr "Категорія аудіо"
+
+#. module: audio_ai_processor
+#: model:ir.model.fields,field_description:audio_ai_processor.field_audio_task__audio_file
+#: model:ir.model.fields,field_description:audio_ai_processor.field_audio_upload_wizard_line__audio_file
+#: model_terms:ir.ui.view,arch_db:audio_ai_processor.audio_task_view_form
+msgid "Audio File"
+msgstr "Аудіофайл"
+
+#. module: audio_ai_processor
+#: model:ir.model.fields,field_description:audio_ai_processor.field_audio_upload_wizard__file_ids
+msgid "Audio Files"
+msgstr "Аудіофайли"
+
+#. module: audio_ai_processor
+#: model:ir.model,name:audio_ai_processor.model_audio_tag
+#: model_terms:ir.ui.view,arch_db:audio_ai_processor.audio_tag_view_form
+msgid "Audio Tag"
+msgstr "Тег аудіо"
+
+#. module: audio_ai_processor
+#: model_terms:ir.ui.view,arch_db:audio_ai_processor.audio_tag_view_tree
+msgid "Audio Tags"
+msgstr "Теги аудіо"
+
+#. module: audio_ai_processor
+#: model_terms:ir.ui.view,arch_db:audio_ai_processor.audio_task_view_form
+msgid "Audio Task"
+msgstr "Аудіо завдання"
+
+#. module: audio_ai_processor
+#: model:ir.actions.report,name:audio_ai_processor.action_report_audio_task
+#: model_terms:ir.ui.view,arch_db:audio_ai_processor.report_audio_task
+msgid "Audio Task Report"
+msgstr "Звіт аудіо завдання"
+
+#. module: audio_ai_processor
+#: model:ir.actions.act_window,name:audio_ai_processor.audio_task_action
+#: model:ir.model.fields,field_description:audio_ai_processor.field_res_partner__audio_task_count
+#: model:ir.model.fields,field_description:audio_ai_processor.field_res_partner__audio_task_ids
+#: model:ir.model.fields,field_description:audio_ai_processor.field_res_users__audio_task_count
+#: model:ir.model.fields,field_description:audio_ai_processor.field_res_users__audio_task_ids
+#: model:ir.ui.menu,name:audio_ai_processor.audio_task_menu
+#: model_terms:ir.ui.view,arch_db:audio_ai_processor.audio_task_view_tree
+#: model_terms:ir.ui.view,arch_db:audio_ai_processor.res_partner_view_form_inherit
+msgid "Audio Tasks"
+msgstr "Аудіо завдання"
+
+#. module: audio_ai_processor
+#: model:ir.model,name:audio_ai_processor.model_audio_task
+msgid "Audio Transcription Task"
+msgstr "Завдання транскрипції аудіо"
+
+#. module: audio_ai_processor
+#: model:ir.model,name:audio_ai_processor.model_audio_upload_wizard_line
+msgid "Audio Upload Wizard Line"
+msgstr "Рядок майстра завантаження аудіо"
+
+#. module: audio_ai_processor
+#. odoo-python
+#: code:addons/audio_ai_processor/models/audio_task.py:0
+#, python-format
+msgid "Audio filename is missing."
+msgstr "Відсутня назва аудіофайлу."
+
+#. module: audio_ai_processor
+#: model:ir.module.category,description:audio_ai_processor.audio_ai_module_category
+msgid "Audio transcription and processing"
+msgstr "Транскрипція та обробка аудіо"
+
+#. module: audio_ai_processor
+#: model_terms:ir.ui.view,arch_db:audio_ai_processor.audio_task_view_form
+#: model_terms:ir.ui.view,arch_db:audio_ai_processor.audio_upload_wizard_view_form
+msgid "Cancel"
+msgstr "Скасувати"
+
+#. module: audio_ai_processor
+#: model:ir.actions.act_window,name:audio_ai_processor.audio_category_action
+#: model:ir.ui.menu,name:audio_ai_processor.audio_category_menu
+msgid "Categories"
+msgstr "Категорії"
+
+#. module: audio_ai_processor
+#: model:ir.model.fields,field_description:audio_ai_processor.field_audio_task__category_id
+#: model_terms:ir.ui.view,arch_db:audio_ai_processor.audio_task_view_search
+msgid "Category"
+msgstr "Категорія"
+
+#. module: audio_ai_processor
+#: model_terms:ir.ui.view,arch_db:audio_ai_processor.audio_category_view_form
+msgid "Category Name"
+msgstr "Назва категорії"
+
+#. module: audio_ai_processor
+#: model:ir.model.fields,field_description:audio_ai_processor.field_audio_category__color
+#: model:ir.model.fields,field_description:audio_ai_processor.field_audio_tag__color
+#: model:ir.model.fields,field_description:audio_ai_processor.field_audio_task__color
+msgid "Color"
+msgstr "Колір"
+
+#. module: audio_ai_processor
+#: model:ir.model.fields,field_description:audio_ai_processor.field_audio_task__company_id
+msgid "Company"
+msgstr "Компанія"
+
+#. module: audio_ai_processor
+#: model:ir.model,name:audio_ai_processor.model_res_config_settings
+msgid "Config Settings"
+msgstr "Налаштування конфігурації"
+
+#. module: audio_ai_processor
+#: model:ir.ui.menu,name:audio_ai_processor.audio_ai_processor_menu_config
+msgid "Configuration"
+msgstr "Конфігурація"
+
+#. module: audio_ai_processor
+#: model:ir.model,name:audio_ai_processor.model_res_partner
+msgid "Contact"
+msgstr "Контакт"
+
+#. module: audio_ai_processor
+#: model_terms:ir.actions.act_window,help:audio_ai_processor.audio_task_action
+msgid "Create your first audio task"
+msgstr "Створіть своє перше аудіо завдання"
+
+#. module: audio_ai_processor
+#. odoo-python
+#: code:addons/audio_ai_processor/wizard/audio_upload_wizard.py:0
+#, python-format
+msgid "Created Tasks"
+msgstr "Створені завдання"
+
+#. module: audio_ai_processor
+#: model:ir.model.fields,field_description:audio_ai_processor.field_audio_category__create_uid
+#: model:ir.model.fields,field_description:audio_ai_processor.field_audio_tag__create_uid
+#: model:ir.model.fields,field_description:audio_ai_processor.field_audio_task__create_uid
+#: model:ir.model.fields,field_description:audio_ai_processor.field_audio_upload_wizard__create_uid
+#: model:ir.model.fields,field_description:audio_ai_processor.field_audio_upload_wizard_line__create_uid
+msgid "Created by"
+msgstr "Створено"
+
+#. module: audio_ai_processor
+#: model:ir.model.fields,field_description:audio_ai_processor.field_audio_category__create_date
+#: model:ir.model.fields,field_description:audio_ai_processor.field_audio_tag__create_date
+#: model:ir.model.fields,field_description:audio_ai_processor.field_audio_task__create_date
+#: model:ir.model.fields,field_description:audio_ai_processor.field_audio_upload_wizard__create_date
+#: model:ir.model.fields,field_description:audio_ai_processor.field_audio_upload_wizard_line__create_date
+msgid "Created on"
+msgstr "Дата створення"
+
+#. module: audio_ai_processor
+#: model:ir.model.fields,field_description:audio_ai_processor.field_audio_category__display_name
+#: model:ir.model.fields,field_description:audio_ai_processor.field_audio_tag__display_name
+#: model:ir.model.fields,field_description:audio_ai_processor.field_audio_task__display_name
+#: model:ir.model.fields,field_description:audio_ai_processor.field_audio_upload_wizard__display_name
+#: model:ir.model.fields,field_description:audio_ai_processor.field_audio_upload_wizard_line__display_name
+msgid "Display Name"
+msgstr "Відображувана назва"
+
+#. module: audio_ai_processor
+#: model:ir.model.fields.selection,name:audio_ai_processor.selection__audio_task__state__done
+#: model_terms:ir.ui.view,arch_db:audio_ai_processor.audio_task_view_search
+msgid "Done"
+msgstr "Завершено"
+
+#. module: audio_ai_processor
+#: model_terms:ir.ui.view,arch_db:audio_ai_processor.audio_task_view_form
+msgid "Download"
+msgstr "Завантажити"
+
+#. module: audio_ai_processor
+#: model:ir.model.fields.selection,name:audio_ai_processor.selection__audio_task__state__draft
+#: model_terms:ir.ui.view,arch_db:audio_ai_processor.audio_task_view_search
+msgid "Draft"
+msgstr "Чернетка"
+
+#. module: audio_ai_processor
+#: model:ir.model.fields.selection,name:audio_ai_processor.selection__res_config_settings__whisper_language__en
+msgid "English"
+msgstr "Англійська"
+
+#. module: audio_ai_processor
+#: model:ir.model.fields,field_description:audio_ai_processor.field_audio_task__error_message
+#: model:ir.model.fields.selection,name:audio_ai_processor.selection__audio_task__state__error
+#: model_terms:ir.ui.view,arch_db:audio_ai_processor.audio_task_view_form
+#: model_terms:ir.ui.view,arch_db:audio_ai_processor.audio_task_view_search
+#: model_terms:ir.ui.view,arch_db:audio_ai_processor.report_audio_task
+msgid "Error"
+msgstr "Помилка"
+
+#. module: audio_ai_processor
+#. odoo-python
+#: code:addons/audio_ai_processor/models/audio_task.py:0
+#: code:addons/audio_ai_processor/models/audio_task.py:0
+#, python-format
+msgid "Error: %s"
+msgstr "Помилка: %s"
+
+#. module: audio_ai_processor
+#: model:ir.model.fields,field_description:audio_ai_processor.field_audio_task__audio_filename
+#: model:ir.model.fields,field_description:audio_ai_processor.field_audio_upload_wizard_line__filename
+msgid "Filename"
+msgstr "Назва файлу"
+
+#. module: audio_ai_processor
+#: model:ir.model.fields,field_description:audio_ai_processor.field_audio_task__message_follower_ids
+msgid "Followers"
+msgstr "Підписники"
+
+#. module: audio_ai_processor
+#: model:ir.model.fields,field_description:audio_ai_processor.field_audio_task__message_partner_ids
+msgid "Followers (Partners)"
+msgstr "Підписники (Партнери)"
+
+#. module: audio_ai_processor
+#: model:ir.model.fields,help:audio_ai_processor.field_audio_task__activity_type_icon
+msgid "Font awesome icon e.g. fa-tasks"
+msgstr ""
+
+#. module: audio_ai_processor
+#: model:ir.model.fields.selection,name:audio_ai_processor.selection__res_config_settings__whisper_language__fr
+msgid "French"
+msgstr "Французька"
+
+#. module: audio_ai_processor
+#: model_terms:ir.ui.view,arch_db:audio_ai_processor.res_config_settings_view_form
+msgid "From"
+msgstr "З"
+
+#. module: audio_ai_processor
+#: model:ir.model.fields.selection,name:audio_ai_processor.selection__res_config_settings__whisper_language__de
+msgid "German"
+msgstr "Німецька"
+
+#. module: audio_ai_processor
+#: model_terms:ir.ui.view,arch_db:audio_ai_processor.audio_task_view_search
+msgid "Group By"
+msgstr "Групувати за"
+
+#. module: audio_ai_processor
+#: model:ir.model.fields,field_description:audio_ai_processor.field_audio_task__has_message
+msgid "Has Message"
+msgstr ""
+
+#. module: audio_ai_processor
+#: model:ir.model.fields.selection,name:audio_ai_processor.selection__audio_task__priority__1
+msgid "High"
+msgstr "Високий"
+
+#. module: audio_ai_processor
+#: model_terms:ir.ui.view,arch_db:audio_ai_processor.audio_task_view_search
+msgid "High Priority"
+msgstr "Високий пріоритет"
+
+#. module: audio_ai_processor
+#: model_terms:ir.ui.view,arch_db:audio_ai_processor.res_config_settings_view_form
+msgid "How to process the queue"
+msgstr "Як обробляти чергу"
+
+#. module: audio_ai_processor
+#: model:ir.model.fields,field_description:audio_ai_processor.field_audio_category__id
+#: model:ir.model.fields,field_description:audio_ai_processor.field_audio_tag__id
+#: model:ir.model.fields,field_description:audio_ai_processor.field_audio_task__id
+#: model:ir.model.fields,field_description:audio_ai_processor.field_audio_upload_wizard__id
+#: model:ir.model.fields,field_description:audio_ai_processor.field_audio_upload_wizard_line__id
+msgid "ID"
+msgstr ""
+
+#. module: audio_ai_processor
+#: model:ir.model.fields,field_description:audio_ai_processor.field_audio_task__activity_exception_icon
+msgid "Icon"
+msgstr ""
+
+#. module: audio_ai_processor
+#: model:ir.model.fields,help:audio_ai_processor.field_audio_task__activity_exception_icon
+msgid "Icon to indicate an exception activity."
+msgstr ""
+
+#. module: audio_ai_processor
+#: model:ir.model.fields,help:audio_ai_processor.field_audio_task__message_needaction
+msgid "If checked, new messages require your attention."
+msgstr ""
+
+#. module: audio_ai_processor
+#: model:ir.model.fields,help:audio_ai_processor.field_audio_task__message_has_error
+msgid "If checked, some messages have a delivery error."
+msgstr ""
+
+#. module: audio_ai_processor
+#: model:ir.model.fields.selection,name:audio_ai_processor.selection__res_config_settings__processing_mode__immediate
+msgid "Immediate (one after another)"
+msgstr "Негайно (одне за одним)"
+
+#. module: audio_ai_processor
+#: model:ir.model.fields,help:audio_ai_processor.field_res_config_settings__processing_mode
+msgid ""
+"Immediate: process next task right after previous completes. Scheduled: "
+"process only during specified hours."
+msgstr ""
+
+#. module: audio_ai_processor
+#: model:ir.model.fields.selection,name:audio_ai_processor.selection__audio_task__state__pending
+#: model_terms:ir.ui.view,arch_db:audio_ai_processor.audio_task_view_search
+msgid "In Queue"
+msgstr "У черзі"
+
+#. module: audio_ai_processor
+#: model_terms:ir.ui.view,arch_db:audio_ai_processor.audio_task_view_form
+msgid "Info"
+msgstr "Інформація"
+
+#. module: audio_ai_processor
+#: model:audio.category,name:audio_ai_processor.audio_category_interviews
+msgid "Interviews"
+msgstr "Інтервʼю"
+
+#. module: audio_ai_processor
+#. odoo-python
+#: code:addons/audio_ai_processor/models/audio_task.py:0
+#, python-format
+msgid "Invalid audio format. Supported: %s"
+msgstr "Невірний формат аудіо. Підтримуються: %s"
+
+#. module: audio_ai_processor
+#: model:ir.model.fields,field_description:audio_ai_processor.field_audio_task__message_is_follower
+msgid "Is Follower"
+msgstr ""
+
+#. module: audio_ai_processor
+#: model_terms:ir.ui.view,arch_db:audio_ai_processor.res_config_settings_view_form
+msgid "Language"
+msgstr "Мова"
+
+#. module: audio_ai_processor
+#: model:ir.model.fields,help:audio_ai_processor.field_res_config_settings__whisper_language
+msgid "Language hint for audio transcription"
+msgstr "Підказка мови для транскрипції аудіо"
+
+#. module: audio_ai_processor
+#: model_terms:ir.ui.view,arch_db:audio_ai_processor.res_config_settings_view_form
+msgid "Language hint for transcription"
+msgstr "Підказка мови для транскрипції"
+
+#. module: audio_ai_processor
+#: model:ir.model.fields,field_description:audio_ai_processor.field_audio_category__write_uid
+#: model:ir.model.fields,field_description:audio_ai_processor.field_audio_tag__write_uid
+#: model:ir.model.fields,field_description:audio_ai_processor.field_audio_task__write_uid
+#: model:ir.model.fields,field_description:audio_ai_processor.field_audio_upload_wizard__write_uid
+#: model:ir.model.fields,field_description:audio_ai_processor.field_audio_upload_wizard_line__write_uid
+msgid "Last Updated by"
+msgstr "Востаннє оновлено"
+
+#. module: audio_ai_processor
+#: model:ir.model.fields,field_description:audio_ai_processor.field_audio_category__write_date
+#: model:ir.model.fields,field_description:audio_ai_processor.field_audio_tag__write_date
+#: model:ir.model.fields,field_description:audio_ai_processor.field_audio_task__write_date
+#: model:ir.model.fields,field_description:audio_ai_processor.field_audio_upload_wizard__write_date
+#: model:ir.model.fields,field_description:audio_ai_processor.field_audio_upload_wizard_line__write_date
+msgid "Last Updated on"
+msgstr "Дата оновлення"
+
+#. module: audio_ai_processor
+#: model:audio.category,name:audio_ai_processor.audio_category_lectures
+msgid "Lectures"
+msgstr ""
+
+#. module: audio_ai_processor
+#: model:audio.category,name:audio_ai_processor.audio_category_meetings
+msgid "Meetings"
+msgstr ""
+
+#. module: audio_ai_processor
+#: model:ir.model.fields,field_description:audio_ai_processor.field_audio_task__message_has_error
+msgid "Message Delivery error"
+msgstr ""
+
+#. module: audio_ai_processor
+#: model:ir.model.fields,field_description:audio_ai_processor.field_audio_task__message_ids
+msgid "Messages"
+msgstr ""
+
+#. module: audio_ai_processor
+#: model:ir.model.fields,field_description:audio_ai_processor.field_audio_task__my_activity_date_deadline
+msgid "My Activity Deadline"
+msgstr ""
+
+#. module: audio_ai_processor
+#: model_terms:ir.ui.view,arch_db:audio_ai_processor.audio_task_view_search
+msgid "My Tasks"
+msgstr "Мої завдання"
+
+#. module: audio_ai_processor
+#: model:ir.model.fields,field_description:audio_ai_processor.field_audio_category__name
+#: model:ir.model.fields,field_description:audio_ai_processor.field_audio_tag__name
+#: model:ir.model.fields,field_description:audio_ai_processor.field_audio_task__name
+msgid "Name"
+msgstr "Назва"
+
+#. module: audio_ai_processor
+#: model:ir.model.fields,field_description:audio_ai_processor.field_audio_task__activity_date_deadline
+msgid "Next Activity Deadline"
+msgstr ""
+
+#. module: audio_ai_processor
+#: model:ir.model.fields,field_description:audio_ai_processor.field_audio_task__activity_summary
+msgid "Next Activity Summary"
+msgstr ""
+
+#. module: audio_ai_processor
+#: model:ir.model.fields,field_description:audio_ai_processor.field_audio_task__activity_type_id
+msgid "Next Activity Type"
+msgstr ""
+
+#. module: audio_ai_processor
+#: model:ir.model.fields.selection,name:audio_ai_processor.selection__audio_task__priority__0
+msgid "Normal"
+msgstr "Звичайний"
+
+#. module: audio_ai_processor
+#: model:ir.model.fields,field_description:audio_ai_processor.field_audio_task__message_needaction_counter
+msgid "Number of Actions"
+msgstr ""
+
+#. module: audio_ai_processor
+#: model:ir.model.fields,field_description:audio_ai_processor.field_audio_task__message_has_error_counter
+msgid "Number of errors"
+msgstr ""
+
+#. module: audio_ai_processor
+#: model:ir.model.fields,help:audio_ai_processor.field_audio_task__message_needaction_counter
+msgid "Number of messages requiring action"
+msgstr ""
+
+#. module: audio_ai_processor
+#: model:ir.model.fields,help:audio_ai_processor.field_audio_task__message_has_error_counter
+msgid "Number of messages with delivery error"
+msgstr ""
+
+#. module: audio_ai_processor
+#: model:ir.model.fields,field_description:audio_ai_processor.field_res_config_settings__openai_api_key
+#: model_terms:ir.ui.view,arch_db:audio_ai_processor.res_config_settings_view_form
+msgid "OpenAI API Key"
+msgstr "API ключ OpenAI"
+
+#. module: audio_ai_processor
+#: model_terms:ir.ui.view,arch_db:audio_ai_processor.res_config_settings_view_form
+msgid "OpenAI Whisper"
+msgstr ""
+
+#. module: audio_ai_processor
+#: model:ir.model.fields,field_description:audio_ai_processor.field_audio_task__partner_id
+msgid "Partner"
+msgstr "Партнер"
+
+#. module: audio_ai_processor
+#. odoo-python
+#: code:addons/audio_ai_processor/wizard/audio_upload_wizard.py:0
+#, python-format
+msgid "Please add at least one audio file."
+msgstr ""
+
+#. module: audio_ai_processor
+#. odoo-python
+#: code:addons/audio_ai_processor/models/audio_task.py:0
+#, python-format
+msgid "Please configure OpenAI API key in Settings."
+msgstr ""
+
+#. module: audio_ai_processor
+#. odoo-python
+#: code:addons/audio_ai_processor/models/audio_task.py:0
+#, python-format
+msgid "Please upload an audio file first."
+msgstr "Спочатку завантажте аудіофайл."
+
+#. module: audio_ai_processor
+#: model:ir.model.fields,field_description:audio_ai_processor.field_audio_task__priority
+msgid "Priority"
+msgstr "Пріоритет"
+
+#. module: audio_ai_processor
+#: model:ir.model.fields,field_description:audio_ai_processor.field_res_config_settings__scheduled_hour_from
+msgid "Process From Hour"
+msgstr ""
+
+#. module: audio_ai_processor
+#: model:ir.model.fields,field_description:audio_ai_processor.field_res_config_settings__scheduled_hour_to
+msgid "Process Until Hour"
+msgstr ""
+
+#. module: audio_ai_processor
+#: model_terms:ir.ui.view,arch_db:audio_ai_processor.res_config_settings_view_form
+msgid "Process only during these hours (for Scheduled mode)"
+msgstr "Обробляти лише протягом цих годин (для запланованого режиму)"
+
+#. module: audio_ai_processor
+#: model:ir.model.fields,help:audio_ai_processor.field_res_config_settings__scheduled_hour_to
+msgid "Process until this hour (0-23)"
+msgstr ""
+
+#. module: audio_ai_processor
+#: model:ir.model.fields,field_description:audio_ai_processor.field_res_config_settings__processing_mode
+#: model_terms:ir.ui.view,arch_db:audio_ai_processor.res_config_settings_view_form
+msgid "Processing Mode"
+msgstr "Режим обробки"
+
+#. module: audio_ai_processor
+#: model:ir.model.fields,field_description:audio_ai_processor.field_audio_task__queue_position
+msgid "Queue Position"
+msgstr "Позиція у черзі"
+
+#. module: audio_ai_processor
+#: model_terms:ir.ui.view,arch_db:audio_ai_processor.res_config_settings_view_form
+msgid "Queue Processing"
+msgstr "Обробка черги"
+
+#. module: audio_ai_processor
+#. odoo-python
+#: code:addons/audio_ai_processor/models/audio_task.py:0
+#, python-format
+msgid "Removed from queue."
+msgstr "Видалено з черги."
+
+#. module: audio_ai_processor
+#: model_terms:ir.ui.view,arch_db:audio_ai_processor.res_config_settings_view_form
+msgid "Required for audio transcription"
+msgstr "Потрібно для аудіотранскрипції"
+
+#. module: audio_ai_processor
+#: model_terms:ir.ui.view,arch_db:audio_ai_processor.audio_task_view_form
+msgid "Reset"
+msgstr "Скинути"
+
+#. module: audio_ai_processor
+#: model:ir.model.fields,field_description:audio_ai_processor.field_audio_task__activity_user_id
+msgid "Responsible User"
+msgstr ""
+
+#. module: audio_ai_processor
+#: model:ir.model.fields,field_description:audio_ai_processor.field_audio_task__result_file
+msgid "Result File"
+msgstr "Файл результатів"
+
+#. module: audio_ai_processor
+#: model:ir.model.fields,field_description:audio_ai_processor.field_audio_task__result_filename
+msgid "Result Filename"
+msgstr ""
+
+#. module: audio_ai_processor
+#: model:audio.tag,name:audio_ai_processor.audio_tag_review
+msgid "Review"
+msgstr ""
+
+#. module: audio_ai_processor
+#: model:ir.model.fields.selection,name:audio_ai_processor.selection__res_config_settings__whisper_language__ru
+msgid "Russian"
+msgstr ""
+
+#. module: audio_ai_processor
+#: model:ir.model.fields.selection,name:audio_ai_processor.selection__res_config_settings__processing_mode__scheduled
+msgid "Scheduled (specific hours only)"
+msgstr "За розкладом (лише за певними годинами)"
+
+#. module: audio_ai_processor
+#: model_terms:ir.ui.view,arch_db:audio_ai_processor.res_config_settings_view_form
+msgid "Scheduled Hours"
+msgstr "Розклад годин"
+
+#. module: audio_ai_processor
+#: model_terms:ir.ui.view,arch_db:audio_ai_processor.audio_task_view_search
+msgid "Search Audio Tasks"
+msgstr ""
+
+#. module: audio_ai_processor
+#: model:ir.model.fields,field_description:audio_ai_processor.field_audio_category__sequence
+msgid "Sequence"
+msgstr ""
+
+#. module: audio_ai_processor
+#: model:ir.model.fields.selection,name:audio_ai_processor.selection__res_config_settings__whisper_language__es
+msgid "Spanish"
+msgstr ""
+
+#. module: audio_ai_processor
+#: model:ir.model.fields,help:audio_ai_processor.field_res_config_settings__scheduled_hour_from
+msgid "Start processing from this hour (0-23)"
+msgstr ""
+
+#. module: audio_ai_processor
+#: model:ir.model.fields,field_description:audio_ai_processor.field_audio_task__state
+#: model_terms:ir.ui.view,arch_db:audio_ai_processor.audio_task_view_search
+msgid "Status"
+msgstr "Статус"
+
+#. module: audio_ai_processor
+#: model:ir.model.fields,help:audio_ai_processor.field_audio_task__activity_state
+msgid ""
+"Status based on activities\n"
+"Overdue: Due date is already passed\n"
+"Today: Activity date is today\n"
+"Planned: Future activities."
+msgstr ""
+
+#. module: audio_ai_processor
+#: model:ir.model.fields,help:audio_ai_processor.field_audio_task__audio_file
+msgid "Supported formats: MP3, WAV, M4A, OGG, FLAC"
+msgstr "Підтримані формати: MP3, WAV, M4A, OGG, FLAC"
+
+#. module: audio_ai_processor
+#: model:ir.actions.act_window,name:audio_ai_processor.audio_tag_action
+#: model:ir.model.fields,field_description:audio_ai_processor.field_audio_task__tag_ids
+#: model:ir.ui.menu,name:audio_ai_processor.audio_tag_menu
+msgid "Tags"
+msgstr "Теги"
+
+#. module: audio_ai_processor
+#: model:ir.model.fields,field_description:audio_ai_processor.field_audio_category__task_count
+msgid "Task Count"
+msgstr "Кількість завдань"
+
+#. module: audio_ai_processor
+#: model_terms:ir.ui.view,arch_db:audio_ai_processor.audio_task_view_form
+msgid "Task Name"
+msgstr "Назва задачі"
+
+#. module: audio_ai_processor
+#: model:ir.model.fields,field_description:audio_ai_processor.field_audio_category__task_ids
+msgid "Tasks"
+msgstr "Завдання"
+
+#. module: audio_ai_processor
+#: model_terms:ir.ui.view,arch_db:audio_ai_processor.res_config_settings_view_form
+msgid "To"
+msgstr "До"
+
+#. module: audio_ai_processor
+#: model:ir.model.fields.selection,name:audio_ai_processor.selection__audio_task__state__transcribing
+msgid "Transcribing"
+msgstr "Транскрибування"
+
+#. module: audio_ai_processor
+#: model:ir.model.fields,field_description:audio_ai_processor.field_audio_task__transcription
+#: model_terms:ir.ui.view,arch_db:audio_ai_processor.audio_task_view_form
+#: model_terms:ir.ui.view,arch_db:audio_ai_processor.report_audio_task
+msgid "Transcription"
+msgstr "Транскрипція"
+
+#. module: audio_ai_processor
+#: model:ir.model.fields,field_description:audio_ai_processor.field_audio_task__transcription_time
+msgid "Transcription Time (sec)"
+msgstr "Час транскрибації"
+
+#. module: audio_ai_processor
+#. odoo-python
+#: code:addons/audio_ai_processor/models/audio_task.py:0
+#, python-format
+msgid ""
+"Transcription completed in %.2f sec.\n"
+"\n"
+"%s"
+msgstr ""
+"Транскрипція завершена за %.2f сек.\n"
+"\n"
+"%s"
+
+#. module: audio_ai_processor
+#. odoo-python
+#: code:addons/audio_ai_processor/models/audio_task.py:0
+#, python-format
+msgid "Transcription started..."
+msgstr "Транскрипція розпочалася..."
+
+#. module: audio_ai_processor
+#: model:ir.model.fields,help:audio_ai_processor.field_audio_task__activity_exception_decoration
+msgid "Type of the exception activity on record."
+msgstr ""
+
+#. module: audio_ai_processor
+#: model:ir.model.fields.selection,name:audio_ai_processor.selection__res_config_settings__whisper_language__uk
+msgid "Ukrainian"
+msgstr ""
+
+#. module: audio_ai_processor
+#: model:ir.actions.act_window,name:audio_ai_processor.audio_upload_wizard_action
+#: model_terms:ir.ui.view,arch_db:audio_ai_processor.audio_upload_wizard_view_form
+msgid "Upload Audio Files"
+msgstr "Завантажити аудіофайли"
+
+#. module: audio_ai_processor
+#: model:ir.model,name:audio_ai_processor.model_audio_upload_wizard
+msgid "Upload Multiple Audio Files"
+msgstr "Завантажити кілька аудіофайлів"
+
+#. module: audio_ai_processor
+#: model:ir.ui.menu,name:audio_ai_processor.audio_upload_menu
+msgid "Upload Multiple Files"
+msgstr "Завантажити кілька файлів"
+
+#. module: audio_ai_processor
+#: model_terms:ir.ui.view,arch_db:audio_ai_processor.audio_upload_wizard_view_form
+msgid "Upload and Add to Queue"
+msgstr "Завантажити та додати до черги"
+
+#. module: audio_ai_processor
+#: model_terms:ir.actions.act_window,help:audio_ai_processor.audio_task_action
+msgid "Upload audio files to transcribe them with AI."
+msgstr "Завантажте аудіофайли, щоб транскрибувати їх за допомогою ШІ"
+
+#. module: audio_ai_processor
+#: model:audio.tag,name:audio_ai_processor.audio_tag_urgent
+msgid "Urgent"
+msgstr ""
+
+#. module: audio_ai_processor
+#: model:ir.model.fields,field_description:audio_ai_processor.field_audio_task__user_id
+#: model:res.groups,name:audio_ai_processor.audio_ai_group_user
+#: model_terms:ir.ui.view,arch_db:audio_ai_processor.audio_task_view_search
+msgid "User"
+msgstr "Користувач"
+
+#. module: audio_ai_processor
+#: model:ir.model.fields,field_description:audio_ai_processor.field_res_config_settings__whisper_language
+msgid "Whisper Language"
+msgstr ""
+
+#. module: audio_ai_processor
+#: model:ir.model.fields,field_description:audio_ai_processor.field_audio_upload_wizard_line__wizard_id
+msgid "Wizard"
+msgstr ""
+
+#. module: audio_ai_processor
+#: model_terms:ir.ui.view,arch_db:audio_ai_processor.report_audio_task
+msgid "seconds"
+msgstr ""

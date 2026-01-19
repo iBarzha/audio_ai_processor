@@ -1,18 +1,26 @@
+"""Wizard for uploading multiple audio files at once."""
+
 from odoo import _, fields, models
 from odoo.exceptions import UserError
 
 
 class AudioUploadWizard(models.TransientModel):
+    """Wizard for batch upload of audio files."""
+
     _name = 'audio.upload.wizard'
     _description = 'Upload Multiple Audio Files'
 
     file_ids = fields.One2many(
         comodel_name='audio.upload.wizard.line',
         inverse_name='wizard_id',
-        string='Audio Files',
     )
 
     def action_upload(self):
+        """Create audio tasks for each uploaded file and add them to queue.
+
+        Returns:
+            dict: Window action to display created tasks
+        """
         self.ensure_one()
 
         if not self.file_ids:
@@ -41,21 +49,17 @@ class AudioUploadWizard(models.TransientModel):
 
 
 class AudioUploadWizardLine(models.TransientModel):
+    """Line item for audio upload wizard."""
+
     _name = 'audio.upload.wizard.line'
     _description = 'Audio Upload Wizard Line'
 
     wizard_id = fields.Many2one(
         comodel_name='audio.upload.wizard',
-        string='Wizard',
         required=True,
         ondelete='cascade',
     )
 
-    audio_file = fields.Binary(
-        string='Audio File',
-        required=True,
-    )
+    audio_file = fields.Binary(required=True)
 
-    filename = fields.Char(
-        string='Filename',
-    )
+    filename = fields.Char()

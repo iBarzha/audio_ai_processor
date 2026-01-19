@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record id="audio_category_meetings" model="audio.category">
+        <field name="name">Meetings</field>
+        <field name="sequence">1</field>
+        <field name="color">1</field>
+    </record>
+
+    <record id="audio_category_interviews" model="audio.category">
+        <field name="name">Interviews</field>
+        <field name="sequence">2</field>
+        <field name="color">2</field>
+    </record>
+
+    <record id="audio_category_lectures" model="audio.category">
+        <field name="name">Lectures</field>
+        <field name="sequence">3</field>
+        <field name="color">3</field>
+    </record>
+
+    <record id="audio_tag_urgent" model="audio.tag">
+        <field name="name">Urgent</field>
+        <field name="color">1</field>
+    </record>
+
+    <record id="audio_tag_review" model="audio.tag">
+        <field name="name">Review</field>
+        <field name="color">2</field>
+    </record>
+
+    <record id="audio_tag_archive" model="audio.tag">
+        <field name="name">Archive</field>
+        <field name="color">3</field>
+    </record>
+
+    <record id="audio_task_demo_1" model="audio.task">
+        <field name="name">Team Meeting Recording</field>
+        <field name="state">draft</field>
+        <field name="category_id" ref="audio_category_meetings"/>
+        <field name="user_id" ref="base.user_admin"/>
+    </record>
+
+    <record id="audio_task_demo_2" model="audio.task">
+        <field name="name">Client Interview</field>
+        <field name="state">draft</field>
+        <field name="category_id" ref="audio_category_interviews"/>
+        <field name="user_id" ref="base.user_admin"/>
+        <field name="priority">1</field>
+    </record>
+
+    <record id="audio_task_demo_3" model="audio.task">
+        <field name="name">Training Session</field>
+        <field name="state">draft</field>
+        <field name="category_id" ref="audio_category_lectures"/>
+        <field name="user_id" ref="base.user_admin"/>
+    </record>
+
+</odoo>

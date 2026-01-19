@@ -1,38 +1,46 @@
 # Audio AI Processor
 
-Odoo 17 module for audio transcription using OpenAI Whisper API.
+Модуль Odoo 17 для транскрибації аудіо за допомогою OpenAI Whisper API.
 
-## Features
+## Можливості
 
-- Upload audio files (MP3, WAV, M4A, OGG, FLAC)
-- Queue-based processing
-- Automatic transcription
-- Download results as text files
+- Завантаження аудіофайлів (MP3, WAV, M4A, OGG, FLAC)
+- Обробка через чергу
+- Автоматична транскрибація
+- Завантаження результатів як текстові файли
+- Категорії та теги для організації завдань
+- Kanban вигляд з групуванням за статусом
+- Генерація PDF звітів
+- Інтеграція з контактами (прив'язка завдань до партнерів)
+- Групи безпеки (Користувач / Адміністратор)
 
-## Installation
+## Встановлення
 
-1. Copy module to Odoo addons folder
-2. Install Python dependency: `pip install openai`
-3. Restart Odoo and install the module
+1. Скопіюйте модуль в папку addons Odoo
+2. Встановіть Python залежність: `pip install openai`
+3. Перезапустіть Odoo та встановіть модуль
 
-## Configuration
+## Налаштування
 
-1. Go to **Settings**
-2. Find **Audio AI Processor** section
-3. Enter your **OpenAI API Key**
-4. Select transcription language
-5. Choose processing mode:
-   - **Immediate** - process tasks one after another
-   - **Scheduled** - process only during specific hours
+1. Перейдіть в **Налаштування**
+2. Знайдіть секцію **Audio AI Processor**
+3. Введіть ваш **OpenAI API Key**
+4. Оберіть мову транскрибації
+5. Оберіть режим обробки:
+   - **Негайний** - обробка завдань одне за одним
+   - **Запланований** - обробка тільки у визначені години
 
-## Usage
+## Використання
 
-1. Go to **Audio AI** menu
-2. Create new task or use **Upload Multiple Files**
-3. Upload audio file
-4. Click **Add to Queue**
-5. Wait for transcription to complete
+1. Перейдіть в меню **Audio AI**
+2. Створіть нове завдання або використайте **Завантажити декілька файлів**
+3. Завантажте аудіофайл
+4. Призначте категорію та теги (опціонально)
+5. Натисніть **Додати в чергу**
+6. Дочекайтесь завершення транскрибації
+7. Роздрукуйте PDF звіт за потреби
 
-## License
+## Безпека
 
-LGPL-3
+- **Користувач** - може керувати лише власними завданнями
+- **Адміністратор** - повний доступ до всіх завдань та налаштувань

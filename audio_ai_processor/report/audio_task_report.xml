@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record id="action_report_audio_task" model="ir.actions.report">
+        <field name="name">Audio Task Report</field>
+        <field name="model">audio.task</field>
+        <field name="report_type">qweb-pdf</field>
+        <field name="report_name">audio_ai_processor.report_audio_task</field>
+        <field name="report_file">audio_ai_processor.report_audio_task</field>
+        <field name="print_report_name">'Audio Task - %s' % (object.name)</field>
+        <field name="binding_model_id" ref="model_audio_task"/>
+        <field name="binding_type">report</field>
+    </record>
+
+    <template id="report_audio_task">
+        <t t-call="web.html_container">
+            <t t-foreach="docs" t-as="doc">
+                <t t-call="web.external_layout">
+                    <div class="page">
+                        <h2>Audio Task Report</h2>
+                        <h3 t-field="doc.name"/>
+
+                        <div class="row mt-4">
+                            <div class="col-6">
+                                <strong>Status:</strong>
+                                <span t-field="doc.state"/>
+                            </div>
+                            <div class="col-6">
+                                <strong>Created:</strong>
+                                <span t-field="doc.create_date" t-options="{'widget': 'date'}"/>
+                            </div>
+                        </div>
+
+                        <div class="row mt-2">
+                            <div class="col-6">
+                                <strong>User:</strong>
+                                <span t-field="doc.user_id"/>
+                            </div>
+                            <div class="col-6">
+                                <strong>Category:</strong>
+                                <span t-field="doc.category_id"/>
+                            </div>
+                        </div>
+
+                        <div class="row mt-2" t-if="doc.audio_filename">
+                            <div class="col-12">
+                                <strong>Audio File:</strong>
+                                <span t-field="doc.audio_filename"/>
+                            </div>
+                        </div>
+
+                        <div class="row mt-2" t-if="doc.transcription_time">
+                            <div class="col-12">
+                                <strong>Processing Time:</strong>
+                                <span t-field="doc.transcription_time"/> seconds
+                            </div>
+                        </div>
+
+                        <div class="mt-4" t-if="doc.transcription">
+                            <h4>Transcription</h4>
+                            <p t-field="doc.transcription" style="white-space: pre-wrap;"/>
+                        </div>
+
+                        <div class="mt-4" t-if="doc.error_message">
+                            <h4>Error</h4>
+                            <p t-field="doc.error_message" class="text-danger"/>
+                        </div>
+                    </div>
+                </t>
+            </t>
+        </t>
+    </template>
+
+</odoo>

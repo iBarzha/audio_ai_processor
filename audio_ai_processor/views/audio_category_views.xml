@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record id="audio_category_view_form" model="ir.ui.view">
+        <field name="name">audio.category.form</field>
+        <field name="model">audio.category</field>
+        <field name="arch" type="xml">
+            <form string="Audio Category">
+                <sheet>
+                    <div class="oe_title">
+                        <h1>
+                            <field name="name" placeholder="Category Name"/>
+                        </h1>
+                    </div>
+                    <group>
+                        <group>
+                            <field name="sequence"/>
+                            <field name="color" widget="color_picker"/>
+                            <field name="active"/>
+                        </group>
+                        <group>
+                            <field name="task_count"/>
+                        </group>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id="audio_category_view_tree" model="ir.ui.view">
+        <field name="name">audio.category.tree</field>
+        <field name="model">audio.category</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="sequence" widget="handle"/>
+                <field name="name"/>
+                <field name="task_count"/>
+                <field name="active"/>
+            </tree>
+        </field>
+    </record>
+
+    <record id="audio_category_action" model="ir.actions.act_window">
+        <field name="name">Categories</field>
+        <field name="res_model">audio.category</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+</odoo>
